@@ -5,6 +5,7 @@
         <div class="col-10 m-auto">
         <h5 class="card-title mb-4 mt-3">Consultar - Contatos Agendados</h5>
         @csrf	
+        <div class="table-responsive">
         <table class="table text-center">
             <thead class="table-blue bg-primary">
             <tr>
@@ -41,6 +42,7 @@
                 	
         </tbody>
         </table>
+        
         </div>
    </center>
 @endsection
