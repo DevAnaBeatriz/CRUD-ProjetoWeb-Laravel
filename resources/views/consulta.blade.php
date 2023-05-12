@@ -26,13 +26,13 @@
                     <td>{{$agendamentos->data_contato}}</td>
                     <td>{{$agendamentos->observacao}}</td>
                     <td>
-                        <a href='{{url("/agendamento/ver/{$agendamentos->id}")}}'>
+                        <a href='{{url("/ver/{$agendamentos->id}")}}'>
                             <button class="btn btn-dark">Visualizar</button>
                         </a>
-                        <a href='{{url("/agendamento/editar/{$agendamentos->id}")}}'>
+                        <a href='{{url("/editar/{$agendamentos->id}")}}'>
                             <button class="btn btn-primary">Editar</button>
                         </a>
-                        <a  href='{{url("/agendamento/deletar/{$agendamentos->id}")}}'  class="js-del">  
+                        <a  href='{{url("/excluir/{$agendamentos->id}")}}'  class="js-del">  
                         <button class="btn btn-danger">Deletar</button>
                         </a>
                     </td>

@@ -15,16 +15,16 @@ use App\Http\Controllers\AgendamentoController;
 
 Route::resource('/', AgendamentoController::class);
 
-Route::get('/consulta', 'App\Http\Controllers\AgendamentoController@queries');
+Route::get('/consulta', [AgendamentoController::class, 'queries']);
 
-Route::get('/agendamento/ver/{id}','App\Http\Controllers\AgendamentoController@show');
+Route::get('/ver/{id}',[AgendamentoController::class, 'show']);
 
-Route::post('/agendamento/novo','App\Http\Controllers\AgendamentoController@store')->name('registrar_clientes');
+Route::post('/agendamento/novo',[AgendamentoController::class, 'store'])->name('registrar_clientes');
 
-Route::get('/agendamento/editar/{id}', 'App\Http\Controllers\AgendamentoController@edit');
+Route::get('/editar/{id}', [AgendamentoController::class, 'edit']);
 
-Route::post('/agendamento/editar/{id}', 'App\Http\Controllers\AgendamentoController@update');
+Route::post('/atualizar/{id}', [AgendamentoController::class, 'update']);
 
-Route::get('/agendamento/deletar/{id}', 'App\Http\Controllers\AgendamentoController@delete');
+Route::get('/excluir/{id}', [AgendamentoController::class, 'delete']);
 
-Route::post('agendamento/deletar/{id}', 'App\Http\Controllers\AgendamentoController@destroy')->name('excluir_clientes'); 
+Route::post('/excluir/{id}', [AgendamentoController::class, 'destroy'])->name('excluir_clientes'); 

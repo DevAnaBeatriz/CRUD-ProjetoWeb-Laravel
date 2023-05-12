@@ -3,7 +3,7 @@
 @section('content')
 <h5 class="card-title">Deletar - Agendamento de {{ $agendamento->nome }}</h5>
 					<p>
-					<form action='{{url("/agendamento/deletar/{$agendamento->id}")}}' method="POST">
+					<form action='{{url("/excluir/{$agendamento->id}")}}' method="POST">
 					@csrf
 						<div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Tem certeza que deseja excluir esse registro?</label>

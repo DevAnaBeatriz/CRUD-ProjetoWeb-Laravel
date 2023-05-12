@@ -72,7 +72,7 @@ class AgendamentoController extends Controller
     public function edit(string $id)
     {
         $agendamento=ModelAgendamento::find($id);
-           return view('edit', compact('agendamento'));
+           return view('editar', compact('agendamento'));
     }
 
     /**

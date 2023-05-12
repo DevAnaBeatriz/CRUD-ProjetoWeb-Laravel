@@ -7,7 +7,7 @@
 <h5 class="card-title">Editar - Agendamento de {{$agendamento->nome}}</h5>
 
   
-				<form action='{{url("/agendamento/editar/{$agendamento->id}")}}' method="POST">
+				<form action='{{url("/atualizar/{$agendamento->id}")}}' method="POST">
 					@csrf					
 				
 					@if(isset($errors) && count($errors)>0)
